@@ -1,0 +1,63 @@
+### Forge
+
+Compile contracts
+
+```bash
+$ forge build
+```
+
+Run create in interactive mode to be prompted for private key
+
+```bash
+$ forge create SimpleStorage --interactive
+```
+
+Run formatter
+
+```bash
+$ forge fmt
+```
+
+## Scripts
+
+Run script like so
+
+```bash
+$ forge script script/DeploySimpleStorage.s.sol
+```
+
+In foundry if you don't specify a RPC url a temp anvil chain will be spun up.
+
+Run as a simulation
+
+```bash
+
+$ forge script script/DeploySimpleStorage.s.sol --rpc-url http://localhost:8545
+
+```
+
+Add --broadcast and pk to deploy to your local chain
+
+```bash
+
+$ forge script script/DeploySimpleStorage.s.sol --rpc-url http://localhost:8545 --broadcast --private-key 0x000000000000000000000000000000000000
+
+```
+
+### .env
+
+put vars in .env and run source to inject them into your enviornment
+
+```bash
+
+$ source .env
+
+```
+
+Can then refer to them in scripts
+
+```bash
+
+$ forge script script/DeploySimpleStorage.s.sol --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY
+
+```

@@ -1,0 +1,33 @@
+convert values
+send transactions
+manage private keys
+
+## send
+
+pass contract address and
+
+```sh
+$ cast send 0x5FbDB2315678afecb367f032d93F642f64180aa3 "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+```
+
+## call
+
+read from chain
+
+```sh
+% cast call 0x5FbDB2315678afecb367f032d93F642f64180aa3 "retrieve()"
+```
+
+## wallet
+
+new wallet feature for managing private keys. Interactive mode will prompt you for private key and a password for encryption.
+
+```sh
+$ cast wallet import your-account-name --interactive
+```
+
+use when deploying a contract or signing a transaction:
+
+```sh
+$ forge script <script> --rpc-url <rpc_url> --account <account_name> --sender <address> --broadcast
+```

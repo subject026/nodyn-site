@@ -8,11 +8,15 @@ export default defineConfig({
       items: [
         {
           text: "forge",
-          link: "/forge",
+          link: "/foundry/forge",
         },
         {
           text: "cast",
-          link: "/forge",
+          link: "/foundry/cast",
+        },
+        {
+          text: "anvil",
+          link: "/foundry/anvil",
         },
       ],
     },
